@@ -23,5 +23,12 @@ namespace pryOrellano_IEFI
             v.Show();
             this.Hide();
         }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            frmRegistrarse v = new frmRegistrarse();
+            v.Show();
+            this.Hide();
+        }
     }
 }

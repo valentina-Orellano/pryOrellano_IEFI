@@ -16,5 +16,19 @@ namespace pryOrellano_IEFI
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmLogin v = new frmLogin();
+            v.Show();
+            this.Close();
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            frmPrincipal v = new frmPrincipal();
+            v.Show();
+            this.Close();
+        }
     }
 }

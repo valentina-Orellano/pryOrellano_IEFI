@@ -50,6 +50,7 @@
             this.btnRegistrarse.TabIndex = 1;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // frmLogin
             // 
@@ -59,6 +60,7 @@
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.btnInicioSesion);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
 
