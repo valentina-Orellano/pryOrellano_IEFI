@@ -95,6 +95,7 @@ namespace pryOrellano_IEFI
                     BBDD.Eliminar(Usuario);
                     BBDD.CargarUsuarios(dgvMostrar);
                 };
+
             }
             catch (Exception ex)
             {
