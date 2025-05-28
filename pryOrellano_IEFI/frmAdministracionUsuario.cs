@@ -17,8 +17,7 @@ namespace pryOrellano_IEFI
             InitializeComponent();
         }
 
-        public string RolUsuario { get; set; }
-        public string UsuarioActual { get; set; }
+       
         private void frmAdministracionUsuario_Load(object sender, EventArgs e)
         {
             clsConexion BBDD = new clsConexion();

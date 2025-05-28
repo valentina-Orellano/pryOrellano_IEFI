@@ -13,6 +13,12 @@ namespace pryOrellano_IEFI
         public string Contraseña { get; set; }
         public string Rol { get; set; }
 
+        public string  Dirección { get; set; }
+        public string DNI { get; set; }
+        public string Teléfono { get; set; }
+        public string Gmail { get; set; }
+
+
         public DateTime FechaCreacion { get; set; }
         public DateTime UltimaConexion { get; set; }
         public TimeSpan TiempoUltimaConexion { get; set; }

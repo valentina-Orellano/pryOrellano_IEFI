@@ -29,202 +29,130 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministracionUsuario));
-            this.gbUsuario = new System.Windows.Forms.GroupBox();
-            this.gbTiempo = new System.Windows.Forms.GroupBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.cmbRol = new System.Windows.Forms.ComboBox();
-            this.lblCreacion = new System.Windows.Forms.Label();
-            this.lblUltima = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTiempoUlt = new System.Windows.Forms.Label();
-            this.dtFechaC = new System.Windows.Forms.DateTimePicker();
-            this.dtUltimaC = new System.Windows.Forms.DateTimePicker();
-            this.mskTiempoU = new System.Windows.Forms.MaskedTextBox();
-            this.mskTiempoTotal = new System.Windows.Forms.MaskedTextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.gbTiempo = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvMostrar = new System.Windows.Forms.DataGridView();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.gbUsuario.SuspendLayout();
             this.gbTiempo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).BeginInit();
             this.SuspendLayout();
             // 
-            // gbUsuario
+            // cmbEstado
             // 
-            this.gbUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gbUsuario.Controls.Add(this.cmbEstado);
-            this.gbUsuario.Controls.Add(this.lblEstado);
-            this.gbUsuario.Controls.Add(this.cmbRol);
-            this.gbUsuario.Controls.Add(this.txtContraseña);
-            this.gbUsuario.Controls.Add(this.txtUsuario);
-            this.gbUsuario.Controls.Add(this.lblRol);
-            this.gbUsuario.Controls.Add(this.lblContraseña);
-            this.gbUsuario.Controls.Add(this.lblUsuario);
-            this.gbUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gbUsuario.Location = new System.Drawing.Point(64, 399);
-            this.gbUsuario.Name = "gbUsuario";
-            this.gbUsuario.Size = new System.Drawing.Size(250, 277);
-            this.gbUsuario.TabIndex = 0;
-            this.gbUsuario.TabStop = false;
-            this.gbUsuario.Text = "Usuario";
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(91, 186);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(92, 27);
+            this.cmbEstado.TabIndex = 7;
             // 
-            // gbTiempo
+            // lblEstado
             // 
-            this.gbTiempo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gbTiempo.Controls.Add(this.mskTiempoTotal);
-            this.gbTiempo.Controls.Add(this.mskTiempoU);
-            this.gbTiempo.Controls.Add(this.dtUltimaC);
-            this.gbTiempo.Controls.Add(this.dtFechaC);
-            this.gbTiempo.Controls.Add(this.lblTiempoUlt);
-            this.gbTiempo.Controls.Add(this.lblTotal);
-            this.gbTiempo.Controls.Add(this.lblUltima);
-            this.gbTiempo.Controls.Add(this.lblCreacion);
-            this.gbTiempo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTiempo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gbTiempo.Location = new System.Drawing.Point(370, 399);
-            this.gbTiempo.Name = "gbTiempo";
-            this.gbTiempo.Size = new System.Drawing.Size(531, 277);
-            this.gbTiempo.TabIndex = 1;
-            this.gbTiempo.TabStop = false;
-            this.gbTiempo.Text = "Tiempo";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(16, 59);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(62, 24);
-            this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(17, 112);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(87, 24);
-            this.lblContraseña.TabIndex = 1;
-            this.lblContraseña.Text = "Contraseña:";
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(17, 171);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(35, 24);
-            this.lblRol.TabIndex = 2;
-            this.lblRol.Text = "Rol:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(110, 49);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(115, 32);
-            this.txtUsuario.TabIndex = 3;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(110, 104);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(115, 32);
-            this.txtContraseña.TabIndex = 4;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(22, 192);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(47, 19);
+            this.lblEstado.TabIndex = 6;
+            this.lblEstado.Text = "Estado:";
             // 
             // cmbRol
             // 
             this.cmbRol.Items.AddRange(new object[] {
             "Usuario",
             "Administrador"});
-            this.cmbRol.Location = new System.Drawing.Point(110, 163);
+            this.cmbRol.Location = new System.Drawing.Point(91, 147);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(121, 32);
+            this.cmbRol.Size = new System.Drawing.Size(92, 27);
             this.cmbRol.TabIndex = 5;
             // 
-            // lblCreacion
+            // txtContraseña
             // 
-            this.lblCreacion.AutoSize = true;
-            this.lblCreacion.Location = new System.Drawing.Point(29, 59);
-            this.lblCreacion.Name = "lblCreacion";
-            this.lblCreacion.Size = new System.Drawing.Size(134, 24);
-            this.lblCreacion.TabIndex = 1;
-            this.lblCreacion.Text = "Fecha de creación:";
+            this.txtContraseña.Location = new System.Drawing.Point(91, 99);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(87, 27);
+            this.txtContraseña.TabIndex = 4;
             // 
-            // lblUltima
+            // txtUsuario
             // 
-            this.lblUltima.AutoSize = true;
-            this.lblUltima.Location = new System.Drawing.Point(29, 114);
-            this.lblUltima.Name = "lblUltima";
-            this.lblUltima.Size = new System.Drawing.Size(120, 24);
-            this.lblUltima.TabIndex = 2;
-            this.lblUltima.Text = "Última conexión:";
+            this.txtUsuario.Location = new System.Drawing.Point(91, 55);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(87, 27);
+            this.txtUsuario.TabIndex = 3;
             // 
-            // lblTotal
+            // lblRol
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(29, 218);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(96, 24);
-            this.lblTotal.TabIndex = 3;
-            this.lblTotal.Text = "Tiempo total:";
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(22, 154);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(29, 19);
+            this.lblRol.TabIndex = 2;
+            this.lblRol.Text = "Rol:";
             // 
-            // lblTiempoUlt
+            // lblContraseña
             // 
-            this.lblTiempoUlt.AutoSize = true;
-            this.lblTiempoUlt.Location = new System.Drawing.Point(29, 171);
-            this.lblTiempoUlt.Name = "lblTiempoUlt";
-            this.lblTiempoUlt.Size = new System.Drawing.Size(172, 24);
-            this.lblTiempoUlt.TabIndex = 4;
-            this.lblTiempoUlt.Text = "Tiempo última conexión:";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(13, 107);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(74, 19);
+            this.lblContraseña.TabIndex = 1;
+            this.lblContraseña.Text = "Contraseña:";
             // 
-            // dtFechaC
+            // lblUsuario
             // 
-            this.dtFechaC.Location = new System.Drawing.Point(198, 51);
-            this.dtFechaC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtFechaC.Name = "dtFechaC";
-            this.dtFechaC.Size = new System.Drawing.Size(303, 32);
-            this.dtFechaC.TabIndex = 19;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(33, 55);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(53, 19);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Usuario:";
             // 
-            // dtUltimaC
+            // gbTiempo
             // 
-            this.dtUltimaC.Location = new System.Drawing.Point(198, 106);
-            this.dtUltimaC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtUltimaC.Name = "dtUltimaC";
-            this.dtUltimaC.Size = new System.Drawing.Size(303, 32);
-            this.dtUltimaC.TabIndex = 20;
-            // 
-            // mskTiempoU
-            // 
-            this.mskTiempoU.Location = new System.Drawing.Point(223, 163);
-            this.mskTiempoU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskTiempoU.Mask = "90:00:00";
-            this.mskTiempoU.Name = "mskTiempoU";
-            this.mskTiempoU.Size = new System.Drawing.Size(75, 32);
-            this.mskTiempoU.TabIndex = 21;
-            this.mskTiempoU.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            // 
-            // mskTiempoTotal
-            // 
-            this.mskTiempoTotal.Location = new System.Drawing.Point(223, 210);
-            this.mskTiempoTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskTiempoTotal.Mask = "90:00:00";
-            this.mskTiempoTotal.Name = "mskTiempoTotal";
-            this.mskTiempoTotal.Size = new System.Drawing.Size(75, 32);
-            this.mskTiempoTotal.TabIndex = 22;
-            this.mskTiempoTotal.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+            this.gbTiempo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbTiempo.Controls.Add(this.cmbEstado);
+            this.gbTiempo.Controls.Add(this.lblEstado);
+            this.gbTiempo.Controls.Add(this.cmbRol);
+            this.gbTiempo.Controls.Add(this.txtContraseña);
+            this.gbTiempo.Controls.Add(this.lblUsuario);
+            this.gbTiempo.Controls.Add(this.txtUsuario);
+            this.gbTiempo.Controls.Add(this.lblContraseña);
+            this.gbTiempo.Controls.Add(this.lblRol);
+            this.gbTiempo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTiempo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.gbTiempo.Location = new System.Drawing.Point(48, 324);
+            this.gbTiempo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTiempo.Name = "gbTiempo";
+            this.gbTiempo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTiempo.Size = new System.Drawing.Size(628, 225);
+            this.gbTiempo.TabIndex = 1;
+            this.gbTiempo.TabStop = false;
+            this.gbTiempo.Text = "Tiempo";
             // 
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(113, 352);
+            this.btnAgregar.Location = new System.Drawing.Point(85, 286);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(104, 41);
+            this.btnAgregar.Size = new System.Drawing.Size(78, 33);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -233,9 +161,10 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(418, 352);
+            this.btnModificar.Location = new System.Drawing.Point(314, 286);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(104, 41);
+            this.btnModificar.Size = new System.Drawing.Size(78, 33);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -244,9 +173,10 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(738, 352);
+            this.btnEliminar.Location = new System.Drawing.Point(554, 286);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(104, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(78, 33);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -256,49 +186,29 @@
             // 
             this.dgvMostrar.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Location = new System.Drawing.Point(64, 40);
+            this.dgvMostrar.Location = new System.Drawing.Point(48, 32);
+            this.dgvMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMostrar.Name = "dgvMostrar";
             this.dgvMostrar.RowHeadersWidth = 51;
             this.dgvMostrar.RowTemplate.Height = 24;
-            this.dgvMostrar.Size = new System.Drawing.Size(837, 289);
+            this.dgvMostrar.Size = new System.Drawing.Size(628, 235);
             this.dgvMostrar.TabIndex = 5;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(17, 218);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(57, 24);
-            this.lblEstado.TabIndex = 6;
-            this.lblEstado.Text = "Estado:";
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Usuario",
-            "Administrador"});
-            this.cmbEstado.Location = new System.Drawing.Point(110, 210);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 32);
-            this.cmbEstado.TabIndex = 7;
             // 
             // frmAdministracionUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(988, 719);
+            this.ClientSize = new System.Drawing.Size(741, 584);
             this.Controls.Add(this.dgvMostrar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbTiempo);
-            this.Controls.Add(this.gbUsuario);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAdministracionUsuario";
             this.Text = "Administracion Usuario";
             this.Load += new System.EventHandler(this.frmAdministracionUsuario_Load);
-            this.gbUsuario.ResumeLayout(false);
-            this.gbUsuario.PerformLayout();
             this.gbTiempo.ResumeLayout(false);
             this.gbTiempo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();
@@ -307,8 +217,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gbUsuario;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
@@ -316,14 +224,6 @@
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.GroupBox gbTiempo;
-        private System.Windows.Forms.Label lblTiempoUlt;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblUltima;
-        private System.Windows.Forms.Label lblCreacion;
-        private System.Windows.Forms.MaskedTextBox mskTiempoTotal;
-        private System.Windows.Forms.MaskedTextBox mskTiempoU;
-        private System.Windows.Forms.DateTimePicker dtUltimaC;
-        private System.Windows.Forms.DateTimePicker dtFechaC;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
