@@ -44,7 +44,7 @@ namespace pryOrellano_IEFI
             {
                 IntentosFallidos++;
 
-                MessageBox.Show($"Usuario o Contraseña incorrecto . Intento{IntentosFallidos} de 3");
+                MessageBox.Show($"Usuario o contraseña incorrecto. Intento{IntentosFallidos} de 3");
             }
             if (IntentosFallidos >= 3)
             {
@@ -67,7 +67,7 @@ namespace pryOrellano_IEFI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"No se creo el usuario" + ex.Message);
+                MessageBox.Show($"No se creó el usuario" + ex.Message);
             }
             txtUsuario.Clear();
             txtContraseña.Clear();
