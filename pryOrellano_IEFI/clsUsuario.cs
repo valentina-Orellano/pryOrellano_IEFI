@@ -15,7 +15,7 @@ namespace pryOrellano_IEFI
 
         public string  Dirección { get; set; }
         public string DNI { get; set; }
-        public string Teléfono { get; set; }
+        public long Teléfono { get; set; }
         public string Gmail { get; set; }
 
 

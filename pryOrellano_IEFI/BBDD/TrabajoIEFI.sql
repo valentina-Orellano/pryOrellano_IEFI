@@ -8,7 +8,7 @@ CREATE TABLE Usuarios (
     Rol  VARCHAR(100),
 	Dirección VARCHAR(100),
 	DNI VARCHAR(15) UNIQUE,
-	Teléfono NVARCHAR(20),
+	Teléfono INT,
 	Gmail VARCHAR(100) UNIQUE,
     FechaCreacion DATETIME DEFAULT GETDATE(),
     UltimaConexion DATETIME,

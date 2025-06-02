@@ -36,10 +36,10 @@ namespace pryOrellano_IEFI
                     Usuario.Contraseña = txtContraseña.Text;
                     Usuario.Rol = cmbRol.Text;
                     Usuario.Estado = cmbEstado.Text;
-                    Usuario.FechaCreacion = dtFechaC.Value;
-                    Usuario.UltimaConexion = dtUltimaC.Value;
-                    Usuario.TiempoUltimaConexion = TimeSpan.Parse(mskTiempoU.Text);
-                    Usuario.TiempoTotal=TimeSpan.Parse(mskTiempoTotal.Text);
+                    Usuario.Dirección = txtDireccion.Text;
+                    Usuario.DNI = txtDni.Text;
+                    Usuario.Teléfono = int.Parse(txtTelf.Text);
+                    Usuario.Gmail = txtGmail.Text;
                     BBDD.Agregar(Usuario);
                     BBDD.CargarUsuarios(dgvMostrar);
                 };
@@ -61,10 +61,10 @@ namespace pryOrellano_IEFI
                     Usuario.Contraseña = txtContraseña.Text;
                     Usuario.Rol = cmbRol.Text;
                     Usuario.Estado = cmbEstado.Text;
-                    Usuario.FechaCreacion = dtFechaC.Value;
-                    Usuario.UltimaConexion = dtUltimaC.Value;
-                    Usuario.TiempoUltimaConexion = TimeSpan.Parse(mskTiempoU.Text);
-                    Usuario.TiempoTotal = TimeSpan.Parse(mskTiempoTotal.Text);
+                    Usuario.Dirección = txtDireccion.Text;
+                    Usuario.DNI = txtDni.Text;
+                    Usuario.Teléfono = int.Parse(txtTelf.Text);
+                    Usuario.Gmail = txtGmail.Text;
                     BBDD.Modificar(Usuario);
                     BBDD.CargarUsuarios(dgvMostrar);
                     
@@ -87,10 +87,10 @@ namespace pryOrellano_IEFI
                     Usuario.Contraseña = txtContraseña.Text;
                     Usuario.Rol = cmbRol.Text;
                     Usuario.Estado = cmbEstado.Text;
-                    Usuario.FechaCreacion = dtFechaC.Value;
-                    Usuario.UltimaConexion = dtUltimaC.Value;
-                    Usuario.TiempoUltimaConexion = TimeSpan.Parse(mskTiempoU.Text);
-                    Usuario.TiempoTotal = TimeSpan.Parse(mskTiempoTotal.Text);
+                    Usuario.Dirección = txtDireccion.Text;
+                    Usuario.DNI = txtDni.Text;
+                    Usuario.Teléfono = int.Parse(txtTelf.Text);
+                    Usuario.Gmail = txtGmail.Text;
                     BBDD.Eliminar(Usuario);
                     BBDD.CargarUsuarios(dgvMostrar);
                 };

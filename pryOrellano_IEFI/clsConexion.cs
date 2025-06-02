@@ -159,7 +159,7 @@ namespace pryOrellano_IEFI
         {
             try
             {
-                string query = "SELECT IdUsuario, Usuario, Contraseña, Rol, FechaCreacion, UltimaConexion, TiempoUltimaConexion,TiempoTotal, Estado FROM Usuarios";
+                string query = "SELECT IdUsuario, Usuario, Contraseña, Rol, FechaCreacion, Dirección, DNI, Teléfono, Gmail, Estado FROM Usuarios";
 
                 using (SqlConnection conn = new SqlConnection(cadenaConexion))
                 using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
@@ -190,10 +190,11 @@ namespace pryOrellano_IEFI
                     comando.Parameters.AddWithValue("@Usuario", Usuario.Usuario);
                     comando.Parameters.AddWithValue("@Contraseña", Usuario.Contraseña);
                     comando.Parameters.AddWithValue("@Rol", Usuario.Rol);
+                    comando.Parameters.AddWithValue("@Dirección", Usuario.Dirección);
+                    comando.Parameters.AddWithValue("@DNI", Usuario.DNI);
+                    comando.Parameters.AddWithValue("@Teléfono", Usuario.Teléfono);
+                    comando.Parameters.AddWithValue("@Gmail", Usuario.Gmail);
                     comando.Parameters.AddWithValue("@FechaCreacion", Usuario.FechaCreacion);
-                    comando.Parameters.AddWithValue("@UltimaConexion", Usuario.UltimaConexion);
-                    comando.Parameters.AddWithValue("@TiempoUltimaConexion", Usuario.TiempoUltimaConexion);
-                    comando.Parameters.AddWithValue("@TiempoTotal", Usuario.TiempoTotal);
                     comando.Parameters.AddWithValue("@Estado", Usuario.Estado);
                     comando.ExecuteNonQuery();
                 }
@@ -217,10 +218,10 @@ namespace pryOrellano_IEFI
                     comando.Parameters.AddWithValue("@Usuario", Usuario.Usuario);
                     comando.Parameters.AddWithValue("@Contraseña", Usuario.Contraseña);
                     comando.Parameters.AddWithValue("@Rol", Usuario.Rol);
-                    comando.Parameters.AddWithValue("@FechaCreacion", Usuario.FechaCreacion);
-                    comando.Parameters.AddWithValue("@UltimaConexion", Usuario.UltimaConexion);
-                    comando.Parameters.AddWithValue("@TiempoUltimaConexion", Usuario.TiempoUltimaConexion);
-                    comando.Parameters.AddWithValue("@TiempoTotal", Usuario.TiempoTotal);
+                    comando.Parameters.AddWithValue("@Dirección", Usuario.Dirección);
+                    comando.Parameters.AddWithValue("@DNI", Usuario.DNI);
+                    comando.Parameters.AddWithValue("@Teléfono", Usuario.Teléfono);
+                    comando.Parameters.AddWithValue("@Gmail", Usuario.Gmail);
                     comando.Parameters.AddWithValue("@Estado", Usuario.Estado);
                     comando.ExecuteNonQuery();
                 }
