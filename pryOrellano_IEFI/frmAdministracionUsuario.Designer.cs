@@ -298,6 +298,7 @@
             this.Controls.Add(this.gbTiempo);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdministracionUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion Usuario";
             this.Load += new System.EventHandler(this.frmAdministracionUsuario_Load);
             this.gbTiempo.ResumeLayout(false);

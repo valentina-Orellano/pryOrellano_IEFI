@@ -54,8 +54,9 @@
             this.picFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picFondo.Location = new System.Drawing.Point(0, 0);
+            this.picFondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(890, 604);
+            this.picFondo.Size = new System.Drawing.Size(668, 491);
             this.picFondo.TabIndex = 0;
             this.picFondo.TabStop = false;
             // 
@@ -68,28 +69,29 @@
             this.lblUsuario,
             this.lblFecha,
             this.lblContador});
-            this.ssUsuario.Location = new System.Drawing.Point(0, 574);
+            this.ssUsuario.Location = new System.Drawing.Point(0, 467);
             this.ssUsuario.Name = "ssUsuario";
-            this.ssUsuario.Size = new System.Drawing.Size(890, 30);
+            this.ssUsuario.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.ssUsuario.Size = new System.Drawing.Size(668, 24);
             this.ssUsuario.TabIndex = 1;
             this.ssUsuario.Text = "statusStrip1";
             // 
             // lblUsuario
             // 
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(19, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(18, 19);
             this.lblUsuario.Text = "...";
             // 
             // lblFecha
             // 
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(19, 24);
+            this.lblFecha.Size = new System.Drawing.Size(18, 19);
             this.lblFecha.Text = "...";
             // 
             // lblContador
             // 
             this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(19, 24);
+            this.lblContador.Size = new System.Drawing.Size(18, 19);
             this.lblContador.Text = "...";
             // 
             // tmContador
@@ -111,14 +113,15 @@
             this.msAdministracion});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(890, 32);
+            this.msMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.msMenu.Size = new System.Drawing.Size(668, 27);
             this.msMenu.TabIndex = 2;
             this.msMenu.Text = "menuStrip1";
             // 
             // msTareas
             // 
             this.msTareas.Name = "msTareas";
-            this.msTareas.Size = new System.Drawing.Size(67, 28);
+            this.msTareas.Size = new System.Drawing.Size(57, 23);
             this.msTareas.Text = "Tareas";
             // 
             // msAdministracion
@@ -128,37 +131,39 @@
             this.toolStripMenuItem1,
             this.msAuditoria});
             this.msAdministracion.Name = "msAdministracion";
-            this.msAdministracion.Size = new System.Drawing.Size(124, 28);
+            this.msAdministracion.Size = new System.Drawing.Size(101, 23);
             this.msAdministracion.Text = "Administración";
             // 
             // msUsuario
             // 
             this.msUsuario.Name = "msUsuario";
-            this.msUsuario.Size = new System.Drawing.Size(224, 28);
+            this.msUsuario.Size = new System.Drawing.Size(180, 24);
             this.msUsuario.Text = "Usuario";
+            this.msUsuario.Click += new System.EventHandler(this.msUsuario_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // msAuditoria
             // 
             this.msAuditoria.Name = "msAuditoria";
-            this.msAuditoria.Size = new System.Drawing.Size(224, 28);
+            this.msAuditoria.Size = new System.Drawing.Size(180, 24);
             this.msAuditoria.Text = "Auditoría";
             this.msAuditoria.Click += new System.EventHandler(this.msAuditoria_Click);
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 604);
+            this.ClientSize = new System.Drawing.Size(668, 491);
             this.Controls.Add(this.ssUsuario);
             this.Controls.Add(this.msMenu);
             this.Controls.Add(this.picFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmInicio";
             this.Text = "Inicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

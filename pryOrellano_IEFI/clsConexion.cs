@@ -194,7 +194,7 @@ namespace pryOrellano_IEFI
                     comando.Parameters.AddWithValue("@DNI", Usuario.DNI);
                     comando.Parameters.AddWithValue("@Teléfono", Usuario.Teléfono);
                     comando.Parameters.AddWithValue("@Gmail", Usuario.Gmail);
-                    comando.Parameters.AddWithValue("@FechaCreacion", Usuario.FechaCreacion);
+
                     comando.Parameters.AddWithValue("@Estado", Usuario.Estado);
                     comando.ExecuteNonQuery();
                 }

@@ -38,11 +38,12 @@
             // 
             this.dgvMostrar.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Location = new System.Drawing.Point(122, 99);
+            this.dgvMostrar.Location = new System.Drawing.Point(92, 80);
+            this.dgvMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMostrar.Name = "dgvMostrar";
             this.dgvMostrar.RowHeadersWidth = 51;
             this.dgvMostrar.RowTemplate.Height = 24;
-            this.dgvMostrar.Size = new System.Drawing.Size(845, 404);
+            this.dgvMostrar.Size = new System.Drawing.Size(634, 328);
             this.dgvMostrar.TabIndex = 1;
             // 
             // lblAuditoria
@@ -51,22 +52,25 @@
             this.lblAuditoria.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAuditoria.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuditoria.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAuditoria.Location = new System.Drawing.Point(485, 49);
+            this.lblAuditoria.Location = new System.Drawing.Point(364, 40);
+            this.lblAuditoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAuditoria.Name = "lblAuditoria";
-            this.lblAuditoria.Size = new System.Drawing.Size(99, 34);
+            this.lblAuditoria.Size = new System.Drawing.Size(78, 27);
             this.lblAuditoria.TabIndex = 2;
             this.lblAuditoria.Text = "Auditoría";
             // 
             // frmAuditoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1082, 582);
+            this.ClientSize = new System.Drawing.Size(812, 473);
             this.Controls.Add(this.lblAuditoria);
             this.Controls.Add(this.dgvMostrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAuditoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auditoria";
             this.Load += new System.EventHandler(this.frmAuditoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();

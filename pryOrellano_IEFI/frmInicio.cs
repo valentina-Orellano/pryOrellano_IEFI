@@ -66,5 +66,11 @@ namespace pryOrellano_IEFI
             frmAuditoria v = new frmAuditoria();
             v.ShowDialog();
         }
+
+        private void msUsuario_Click(object sender, EventArgs e)
+        {
+            frmAdministracionUsuario v = new frmAdministracionUsuario();
+            v.ShowDialog();
+        }
     }
 }
