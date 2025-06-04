@@ -272,5 +272,27 @@ namespace pryOrellano_IEFI
             }
             return usuario;
         }
+
+        public void CargarTarea(DataGridView dgv)
+        {
+            try
+            {
+                string query = "SELECT IdUsuario, Usuario, Fecha, TareaId, LugarId, Insumo, Estudio, Vacaciones, Enfermedad, Salario, Recibo, Comentario  FROM Tareas";
+
+                using (SqlConnection conn = new SqlConnection(cadenaConexion))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                {
+                    DataTable tabla = new DataTable();
+                    adapter.Fill(tabla);
+                    dgv.DataSource = tabla;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+        }
     }
 }
