@@ -91,5 +91,83 @@ namespace pryOrellano_IEFI
                 MessageBox.Show($"No se agregó la tarea: {ex.Message}");
             }
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvMostrar.Rows.Count == 0)
+                {
+                    MessageBox.Show("Primero debes completar los datos al formulario.");
+                    return;
+                }
+
+                DataGridViewRow fila = dgvMostrar.Rows[0];
+
+                clsTarea tarea = new clsTarea();
+                clsConexion conexion = new clsConexion();
+
+                tarea.IdUsuario = Convert.ToInt32(fila.Cells[0].Value);
+                tarea.Usuario = fila.Cells[1].Value.ToString();
+                tarea.Fecha = DateTime.Parse(fila.Cells[2].Value.ToString());
+                tarea.TareaId = Convert.ToInt32(cmbTarea.SelectedValue);
+                tarea.LugarId = Convert.ToInt32(cmbLugar.SelectedValue);
+                tarea.Insumo = cbInsumo.Checked;
+                tarea.Estudio = cbEstudio.Checked;
+                tarea.Vacaciones = cbVacaciones.Checked;
+                tarea.Enfermedad = cbEnfermedad.Checked;
+                tarea.Salario = cbSalario.Checked;
+                tarea.Recibo = cbRecibo.Checked;
+                tarea.Comentario = txtComentario.Text;
+
+                conexion.GrabarTarea(tarea);
+                MessageBox.Show("Tarea grabada correctamente.");
+
+               
+                dgvMostrar.Rows.Clear();
+                nmCodigo.Value = 0;
+                txtUsuario.Clear();
+                cmbLugar.SelectedIndex = -1;
+                cmbTarea.SelectedIndex = -1;
+                cbInsumo.Checked = false;
+                cbEstudio.Checked = false;
+                cbVacaciones.Checked = false;
+                cbEnfermedad.Checked = false;
+                cbSalario.Checked = false;
+                cbRecibo.Checked = false;
+                txtComentario.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al grabar la tarea: {ex.Message}");
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            dgvMostrar.DataSource = null;
+            dgvMostrar.Rows.Clear();
+            nmCodigo.Value = 0;
+            txtUsuario.Clear();
+            cmbLugar.SelectedIndex = -1;
+            cmbTarea.SelectedIndex = -1;
+            cbInsumo.Checked = false;
+            cbEstudio.Checked = false;
+            cbVacaciones.Checked = false;
+            cbEnfermedad.Checked = false;
+            cbSalario.Checked = false;
+            cbRecibo.Checked = false;
+            txtComentario.Clear();
+        }
+
+        private void lblAgregarLugar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAgregarTarea_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

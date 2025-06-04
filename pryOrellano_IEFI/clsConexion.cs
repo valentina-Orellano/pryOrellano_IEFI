@@ -294,5 +294,40 @@ namespace pryOrellano_IEFI
             }
 
         }
+
+        public void GrabarTarea(clsTarea Tarea)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                {
+                    conexion.Open();
+                    string query = "INSERT INTO Tareas (IdUsuario, Usuario, Fecha, TareaId, LugarId, Insumo, Estudio, Vacaciones, Enfermedad, Salario, Recibo, Comentario) " +
+                                   "VALUES (@IdUsuario, @Usuario, @Fecha, @TareaId, @LugarId, @Insumo, @Estudio, @Vacaciones, @Enfermedad, @Salario, @Recibo, @Comentario)";
+
+                    SqlCommand comando = new SqlCommand(query, conexion);
+                    //comando.Parameters.AddWithValue("@IdTarea", Tarea.IdTarea);
+                    comando.Parameters.AddWithValue("@IdUsuario", Tarea.IdUsuario);
+                    comando.Parameters.AddWithValue("@Usuario", Tarea.Usuario);
+                    comando.Parameters.AddWithValue("@Fecha", Tarea.Fecha);
+                    comando.Parameters.AddWithValue("@TareaId", Tarea.TareaId);
+                    comando.Parameters.AddWithValue("@LugarId", Tarea.LugarId);
+                    comando.Parameters.AddWithValue("@Insumo", Tarea.Insumo);
+                    comando.Parameters.AddWithValue("@Estudio", Tarea.Estudio);
+                    comando.Parameters.AddWithValue("@Vacaciones", Tarea.Vacaciones);
+                    comando.Parameters.AddWithValue("@Enfermedad", Tarea.Enfermedad);
+                    comando.Parameters.AddWithValue("@Salario", Tarea.Salario);
+                    comando.Parameters.AddWithValue("@Recibo", Tarea.Recibo);
+                    comando.Parameters.AddWithValue("@Comentario", Tarea.Comentario);
+
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar la tarea: " + ex.Message);
+            }
+        }
     }
 }
