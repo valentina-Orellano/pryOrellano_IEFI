@@ -44,14 +44,24 @@
             // 
             // dgvTareas
             // 
+            this.dgvTareas.AllowUserToAddRows = false;
+            this.dgvTareas.AllowUserToDeleteRows = false;
+            this.dgvTareas.AllowUserToResizeColumns = false;
+            this.dgvTareas.AllowUserToResizeRows = false;
             this.dgvTareas.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTareas.Enabled = false;
             this.dgvTareas.Location = new System.Drawing.Point(31, 249);
             this.dgvTareas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTareas.Name = "dgvTareas";
             this.dgvTareas.ReadOnly = true;
+            this.dgvTareas.RowHeadersVisible = false;
             this.dgvTareas.RowHeadersWidth = 62;
             this.dgvTareas.RowTemplate.Height = 28;
+            this.dgvTareas.ShowCellErrors = false;
+            this.dgvTareas.ShowCellToolTips = false;
+            this.dgvTareas.ShowEditingIcon = false;
+            this.dgvTareas.ShowRowErrors = false;
             this.dgvTareas.Size = new System.Drawing.Size(916, 253);
             this.dgvTareas.TabIndex = 16;
             // 
@@ -156,6 +166,7 @@
             this.Controls.Add(this.dgvTareas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHistorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historial";
             this.Load += new System.EventHandler(this.frmHistorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).EndInit();
