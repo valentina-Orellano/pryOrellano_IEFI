@@ -278,6 +278,10 @@
             // 
             // dgvMostrar
             // 
+            this.dgvMostrar.AllowUserToAddRows = false;
+            this.dgvMostrar.AllowUserToDeleteRows = false;
+            this.dgvMostrar.AllowUserToResizeColumns = false;
+            this.dgvMostrar.AllowUserToResizeRows = false;
             this.dgvMostrar.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrar.Location = new System.Drawing.Point(64, 39);
@@ -285,6 +289,10 @@
             this.dgvMostrar.Name = "dgvMostrar";
             this.dgvMostrar.RowHeadersWidth = 51;
             this.dgvMostrar.RowTemplate.Height = 24;
+            this.dgvMostrar.ShowCellErrors = false;
+            this.dgvMostrar.ShowCellToolTips = false;
+            this.dgvMostrar.ShowEditingIcon = false;
+            this.dgvMostrar.ShowRowErrors = false;
             this.dgvMostrar.Size = new System.Drawing.Size(837, 289);
             this.dgvMostrar.TabIndex = 5;
             this.dgvMostrar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrar_CellContentClick);

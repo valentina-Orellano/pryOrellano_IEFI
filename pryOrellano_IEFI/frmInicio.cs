@@ -12,14 +12,21 @@ namespace pryOrellano_IEFI
 {
     public partial class frmInicio : Form
     {
-        public frmInicio()
-        {
-            InitializeComponent();
-            this.FormClosing += frmInicio_FormClosing;
-        }
 
         public string RolUsuario { get; set; }
         public string UsuarioN { get; set; }
+
+        private int IdUsuario;
+        public frmInicio(int idUsuario, string usuario, string rol)
+        {
+            InitializeComponent();
+            this.FormClosing += frmInicio_FormClosing;
+            IdUsuario = idUsuario;
+            UsuarioN = usuario;
+            RolUsuario = rol;
+        }
+
+      
 
         int tiempo = 0;
         private void frmInicio_Load(object sender, EventArgs e)
@@ -70,6 +77,18 @@ namespace pryOrellano_IEFI
         private void msUsuario_Click(object sender, EventArgs e)
         {
             frmAdministracionUsuario v = new frmAdministracionUsuario();
+            v.ShowDialog();
+        }
+
+        private void registrarTareaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTarea v = new frmTarea(RolUsuario, UsuarioN);
+            v.ShowDialog();
+        }
+
+        private void historialTareaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHistorial v = new frmHistorial(IdUsuario);
             v.ShowDialog();
         }
     }

@@ -162,12 +162,14 @@ namespace pryOrellano_IEFI
 
         private void lblAgregarLugar_Click(object sender, EventArgs e)
         {
-
+            frmAgregarLugar v = new frmAgregarLugar();
+            v.ShowDialog();
         }
 
         private void lblAgregarTarea_Click(object sender, EventArgs e)
         {
-
+            frmAgregarTarea v = new frmAgregarTarea();
+            v.ShowDialog();
         }
     }
 }

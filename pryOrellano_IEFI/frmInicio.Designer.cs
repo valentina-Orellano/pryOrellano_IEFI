@@ -43,6 +43,8 @@
             this.msUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.msAuditoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialTareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             this.ssUsuario.SuspendLayout();
             this.msMenu.SuspendLayout();
@@ -54,9 +56,9 @@
             this.picFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picFondo.Location = new System.Drawing.Point(0, 0);
-            this.picFondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picFondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(668, 491);
+            this.picFondo.Size = new System.Drawing.Size(891, 604);
             this.picFondo.TabIndex = 0;
             this.picFondo.TabStop = false;
             // 
@@ -69,29 +71,29 @@
             this.lblUsuario,
             this.lblFecha,
             this.lblContador});
-            this.ssUsuario.Location = new System.Drawing.Point(0, 467);
+            this.ssUsuario.Location = new System.Drawing.Point(0, 574);
             this.ssUsuario.Name = "ssUsuario";
-            this.ssUsuario.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.ssUsuario.Size = new System.Drawing.Size(668, 24);
+            this.ssUsuario.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.ssUsuario.Size = new System.Drawing.Size(891, 30);
             this.ssUsuario.TabIndex = 1;
             this.ssUsuario.Text = "statusStrip1";
             // 
             // lblUsuario
             // 
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(18, 19);
+            this.lblUsuario.Size = new System.Drawing.Size(19, 24);
             this.lblUsuario.Text = "...";
             // 
             // lblFecha
             // 
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(18, 19);
+            this.lblFecha.Size = new System.Drawing.Size(19, 24);
             this.lblFecha.Text = "...";
             // 
             // lblContador
             // 
             this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(18, 19);
+            this.lblContador.Size = new System.Drawing.Size(19, 24);
             this.lblContador.Text = "...";
             // 
             // tmContador
@@ -113,15 +115,18 @@
             this.msAdministracion});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(668, 27);
+            this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.msMenu.Size = new System.Drawing.Size(891, 32);
             this.msMenu.TabIndex = 2;
             this.msMenu.Text = "menuStrip1";
             // 
             // msTareas
             // 
+            this.msTareas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarTareaToolStripMenuItem,
+            this.historialTareaToolStripMenuItem});
             this.msTareas.Name = "msTareas";
-            this.msTareas.Size = new System.Drawing.Size(57, 23);
+            this.msTareas.Size = new System.Drawing.Size(67, 28);
             this.msTareas.Text = "Tareas";
             // 
             // msAdministracion
@@ -131,39 +136,53 @@
             this.toolStripMenuItem1,
             this.msAuditoria});
             this.msAdministracion.Name = "msAdministracion";
-            this.msAdministracion.Size = new System.Drawing.Size(101, 23);
+            this.msAdministracion.Size = new System.Drawing.Size(124, 28);
             this.msAdministracion.Text = "Administración";
             // 
             // msUsuario
             // 
             this.msUsuario.Name = "msUsuario";
-            this.msUsuario.Size = new System.Drawing.Size(180, 24);
+            this.msUsuario.Size = new System.Drawing.Size(154, 28);
             this.msUsuario.Text = "Usuario";
             this.msUsuario.Click += new System.EventHandler(this.msUsuario_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(151, 6);
             // 
             // msAuditoria
             // 
             this.msAuditoria.Name = "msAuditoria";
-            this.msAuditoria.Size = new System.Drawing.Size(180, 24);
+            this.msAuditoria.Size = new System.Drawing.Size(154, 28);
             this.msAuditoria.Text = "Auditoría";
             this.msAuditoria.Click += new System.EventHandler(this.msAuditoria_Click);
             // 
+            // registrarTareaToolStripMenuItem
+            // 
+            this.registrarTareaToolStripMenuItem.Name = "registrarTareaToolStripMenuItem";
+            this.registrarTareaToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.registrarTareaToolStripMenuItem.Text = "Registrar Tarea";
+            this.registrarTareaToolStripMenuItem.Click += new System.EventHandler(this.registrarTareaToolStripMenuItem_Click);
+            // 
+            // historialTareaToolStripMenuItem
+            // 
+            this.historialTareaToolStripMenuItem.Name = "historialTareaToolStripMenuItem";
+            this.historialTareaToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.historialTareaToolStripMenuItem.Text = "Historial Tarea";
+            this.historialTareaToolStripMenuItem.Click += new System.EventHandler(this.historialTareaToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 491);
+            this.ClientSize = new System.Drawing.Size(891, 604);
             this.Controls.Add(this.ssUsuario);
             this.Controls.Add(this.msMenu);
             this.Controls.Add(this.picFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmInicio";
             this.Text = "Inicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -194,6 +213,8 @@
         private System.Windows.Forms.ToolStripMenuItem msUsuario;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem msAuditoria;
+        private System.Windows.Forms.ToolStripMenuItem registrarTareaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialTareaToolStripMenuItem;
     }
 }
 

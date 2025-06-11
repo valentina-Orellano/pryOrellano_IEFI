@@ -35,11 +35,12 @@ namespace pryOrellano_IEFI
                     {
                         if (reader.Read())
                         {
-                            idUsuario = reader.GetInt32(0); // IdUsuario
-                            Iniciar.Rol = reader.GetString(1); // Rol
+                            idUsuario = reader.GetInt32(0); 
+                            Iniciar.Rol = reader.GetString(1); 
 
-                            // Ahora actualizamos la última conexión
-                            reader.Close(); // Cerramos antes de lanzar nuevo comando
+                            reader.Close(); 
+                           
+                            reader.Close();
 
                             string updateQuery = "UPDATE Usuarios SET UltimaConexion = @UltimaConexion WHERE IdUsuario = @IdUsuario";
                             SqlCommand updateCommand = new SqlCommand(updateQuery, conexion);
@@ -76,7 +77,7 @@ namespace pryOrellano_IEFI
                     object resultado = comando.ExecuteScalar();
                     nuevoIdUsuario = Convert.ToInt32(resultado);
 
-                    // Actualizar UltimaConexion a ahora
+                  
                     string queryU = "UPDATE Usuarios SET UltimaConexion = @UltimaConexion WHERE IdUsuario = @IdUsuario";
                     SqlCommand comandoU = new SqlCommand(queryU, conexion);
                     comandoU.Parameters.AddWithValue("@UltimaConexion", DateTime.Now);
@@ -119,7 +120,7 @@ namespace pryOrellano_IEFI
             {
                 conexion.Open();
 
-                // Obtener el tiempo total anterior
+                
                 string query = "SELECT TiempoTotal FROM Usuarios WHERE Usuario = @Usuario";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.AddWithValue("@Usuario", usuario);
@@ -134,7 +135,7 @@ namespace pryOrellano_IEFI
 
                 TimeSpan nuevoTiempoTotal = tiempoTotalAnterior + tiempoSesion;
 
-                // Actualizar: UltimaConexion, TiempoUltimaConexion y TiempoTotal
+                
                 string queryUpdate = @"
                  UPDATE Usuarios 
                  SET 
@@ -144,7 +145,7 @@ namespace pryOrellano_IEFI
                  WHERE Usuario = @Usuario";
 
                 SqlCommand comandoA = new SqlCommand(queryUpdate, conexion);
-                comandoA.Parameters.AddWithValue("@FechaActual", DateTime.Now); // Aquí puedes cambiar a otra fecha si lo necesitas
+                comandoA.Parameters.AddWithValue("@FechaActual", DateTime.Now);
                 comandoA.Parameters.AddWithValue("@TiempoSesion", tiempoSesion);
                 comandoA.Parameters.AddWithValue("@TiempoTotal", nuevoTiempoTotal);
                 comandoA.Parameters.AddWithValue("@Usuario", usuario);
@@ -266,7 +267,7 @@ namespace pryOrellano_IEFI
                     {
                         Usuario = reader["Usuario"].ToString(),
                         Contraseña = reader["Contraseña"].ToString(),
-                        // Otros campos si se necesitan
+                        
                     };
                 }
             }
@@ -328,6 +329,48 @@ namespace pryOrellano_IEFI
             {
                 MessageBox.Show("Error al agregar la tarea: " + ex.Message);
             }
+        }
+
+        public void AgregarTareaTipo(string nombre)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                {
+                    conexion.Open();
+                    string query = "INSERT INTO TareasTipo (Nombre) VALUES (@Nombre)";
+                    SqlCommand comando = new SqlCommand(query, conexion);
+                    comando.Parameters.AddWithValue("@Nombre", nombre);
+                    comando.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar la tarea: " + ex.Message);
+            }
+
+        }
+
+        public void AgregarLugar(string nombre)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                {
+                    conexion.Open();
+                    string query = "INSERT INTO Lugar (Nombre) VALUES (@Nombre)";
+                    SqlCommand comando = new SqlCommand(query, conexion);
+                    comando.Parameters.AddWithValue("@Nombre", nombre);
+                    comando.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar el lugar: " + ex.Message);
+            }
+
         }
     }
 }

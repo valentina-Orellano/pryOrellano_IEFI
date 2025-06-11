@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryOrellano_IEFI
 {
-    internal class clsTarea
+   public class clsTarea
     {
         public int IdTarea { get; set; }
         public int IdUsuario { get; set; }
