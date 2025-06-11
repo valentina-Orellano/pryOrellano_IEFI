@@ -23,7 +23,7 @@ namespace pryOrellano_IEFI
             {
                 clsConexion BBDD = new clsConexion();
                 string nombreLugar = txtCompletar.Text.Trim();
-                BBDD.AgregarTareaTipo(nombreLugar);
+                BBDD.AgregarLugar(nombreLugar);
                 MessageBox.Show("Lugar agregado correctamente");
                 txtCompletar.Clear();
             }

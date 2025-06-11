@@ -251,28 +251,7 @@ namespace pryOrellano_IEFI
                 MessageBox.Show("Error al eliminar el usuario: " + ex.Message);
             }
         }
-        public clsUsuario CargarSoloEsteUsuario(string nombreUsuario)
-        {
-            clsUsuario usuario = null;
-            using (SqlConnection conn = new SqlConnection(cadenaConexion))
-            {
-                string query = "SELECT * FROM Usuarios WHERE Usuario = @Usuario";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Usuario", nombreUsuario);
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    usuario = new clsUsuario
-                    {
-                        Usuario = reader["Usuario"].ToString(),
-                        Contraseña = reader["Contraseña"].ToString(),
-                        
-                    };
-                }
-            }
-            return usuario;
-        }
+       
 
         public void CargarTarea(DataGridView dgv)
         {
